@@ -26,7 +26,7 @@ export const NavLink = styled(Link)`
 `;
 
 export const NavIcon = styled.div`
-    display: black;
+    display: block;
     position: absolute;
     top: 0;
     right: 0%;
