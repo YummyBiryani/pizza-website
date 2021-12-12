@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Link } from 'react-router-dom';
 import {FaTimes} from 'react-icons/fa';
 
-export const SidebarContainer = styled.aside`
+export const SidebarContainer:any = styled.aside`
     position: fixed;
     z-index: 999;
     width: 350px;
@@ -12,7 +12,7 @@ export const SidebarContainer = styled.aside`
     align-items: center;
     top: 0;
     transition: 0.3s ease-in-out;
-    right: ${({isOpen}:any) => isOpen ? '0' : '0px'};
+    right: ${({isOpen}:any) => isOpen ? '0' : '-1700px'};
 
     @media screen and (max-width: 400px){
         width: 100%;
@@ -75,7 +75,7 @@ export const SidebarRoute = styled(Link)`
     color: #fff;
     font-size: 16px;
     outline: none;
-    border: none;
+    border: none; 
     cursor: pointer;
     transition: 0.2s ease-in-out;
     text-decoration: none;

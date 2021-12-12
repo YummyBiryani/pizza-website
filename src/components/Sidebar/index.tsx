@@ -2,13 +2,14 @@ import React from 'react';
 import { SidebarContainer, Icon, CloseIcon, SidebarMenu, SidebarLink, SideBtnWrap, SidebarRoute} from './SidebarElements';
 
 interface Props {
-
+    toggle:()=>void;
+    isOpen: boolean;
 }
 
-export const Sidebar: React.FC<Props> = () => {
+export const Sidebar: React.FC<Props> = ({toggle, isOpen}) => {
         return (
-            <SidebarContainer>
-                <Icon>
+            <SidebarContainer isOpen={isOpen} onClick={toggle}>
+                <Icon onClick={toggle}>
                     <CloseIcon/>
                 </Icon>
                 <SidebarMenu>
